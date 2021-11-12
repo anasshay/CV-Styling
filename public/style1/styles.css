@@ -1,0 +1,255 @@
+
+* {
+    box-sizing: border-box;
+}
+html {
+    line-height: 1.15;
+    /* 1 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 5px 5px 5px 10%;
+    background-color: rgb(151, 151, 151);
+    margin: 0;
+}
+
+header div {
+    width: fit-content;
+    display: flex;
+    font-weight: bold;
+}
+
+section {
+    width: 50%;
+}
+
+h4,
+header div,
+.experience-date-separator {
+    color: rgb(255, 0, 0);
+}
+
+h4 {
+    margin-bottom: 3px;
+}
+
+h4,
+.experience-type {
+    font-weight: bold;
+}
+
+.experience-details {
+    padding-left: 5%;
+    color: rgb(151, 151, 151);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+h3 {
+    position: relative;
+}
+
+h3::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+h3::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    opacity: 0.3;
+    display: block;
+    margin-top: 7px;
+}
+
+#contact {
+    margin: 5px 0 5px 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+}
+
+#contact h3 {
+    display: none;
+}
+
+.contacts {
+    width: min-content;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.contact {
+    display: flex;
+    margin: 0;
+}
+
+.contact-type {
+    padding-bottom: 10px;
+}
+.contact-facebook dt{
+    padding-bottom: 0;
+}
+
+.contact-value {
+    width: 500px;
+    padding-left: 10px;
+}
+
+dd {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    background-color: #000;
+    color: red;
+}
+
+dd a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+dt {
+    background-color: red;
+    color: #fff;
+    width: 110px;
+    padding-left: 10px;
+}
+
+.skill span::after {
+    content: '';
+    background-color: red;
+    position: absolute;
+    height: 25px;
+    top: 0;
+    left: 0;
+    margin: 2%;
+    z-index: -1;
+}
+
+.skill[data-skill='1'] span::after {
+    width: calc(10% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='2'] span::after {
+    width: calc(20% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='3'] span::after {
+    width: calc(30% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='4'] span::after {
+    width: calc(40% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='5'] span::after {
+    width: calc(50% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='6'] span::after {
+    width: calc(60% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='7'] span::after {
+    width: calc(70% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='8'] span::after {
+    width: calc(80% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='9'] span::after {
+    width: calc(90% - 4%); /*Value% - 4%*/
+}
+.skill[data-skill='10'] span::after {
+    width: calc(100% - 4%); /*Value% - 4%*/
+}
+
+
+.skill {
+    /* background-color: #ccc; */
+    padding: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    color: #fff;
+}
+
+.skill::before {
+    content: '';
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #ccc;
+    z-index: -2;
+}
+
+
+
+@media (max-width : 1070px) {
+    header {
+        padding-left: 1%;
+    }
+
+}
+
+@media (max-width : 970px) {
+
+    header div {
+        transform: scale(1.1);
+    }
+
+    .content {
+        padding: 3%;
+    }
+
+    header div {
+        padding-left: 10%;
+        flex-direction: column;
+    }
+
+    #contact {
+        position: static;
+    }
+
+    dd {
+        background-color: #fff;
+    }
+
+    .contact-skype .contact-value {
+        color: #000;
+    }
+
+    #contact h3 {
+        display: block;
+    }
+
+    .contact-value {
+        width: auto;
+    }
+
+    section,
+    #contact {
+        width: 100%;
+    }
+}
