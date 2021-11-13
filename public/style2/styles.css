@@ -31,6 +31,7 @@ header figure {
     font-style: italic;
     color: rgb(126, 126, 126);
 }
+
 h3 {
     font-style: italic;
 }
@@ -38,45 +39,56 @@ h3 {
 #competencies {
     width: 100%;
 }
+
 .skills-primary {
     grid-row: 1;
     align-items: flex-end;
 }
-.skills-secondary{
+
+.skills-secondary {
     grid-row: 2;
 }
 
-.skills-primary, .skills-secondary {
+.skills-primary,
+.skills-secondary {
     display: flex;
     grid-column: 2/11;
 }
+
 .skills-primary .skill {
     color: #fff;
     width: 150px;
     height: fit-content;
-    background-color:#0e8080;
+    background-color: #0e8080;
     padding: 15px;
     margin: 5px;
 }
+
 .skills-secondary .skill {
     color: #fff;
     width: 150px;
     height: fit-content;
-    background-color:#0e8080;
+    background-color: #0e8080;
     padding: 10px;
     margin: 5px;
     padding-left: 5px;
 }
 
 
-#experiences, #education, #competencies, #hobbies {
+#experiences,
+#education,
+#competencies,
+#hobbies {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-auto-rows: minmax(80px, auto);
     gap: 10px;
 }
 
-#experiences h3, #education h3, #competencies h3, #hobbies h3 {
+#experiences h3,
+#education h3,
+#competencies h3,
+#hobbies h3 {
     grid-column: 1/2;
     grid-row: 1/3;
     border-right: 3px solid #000;
@@ -86,13 +98,14 @@ h3 {
 div.experience:first-of-type {
     grid-column: 2 / 11;
     grid-row: 1;
-    
+
 }
 
 .experience:last-child {
     grid-column: 2 / 11;
     grid-row: 2;
 }
+
 .experience {
     position: relative;
     padding-left: 5px;
@@ -105,38 +118,48 @@ div.experience:first-of-type {
     color: rgb(158, 158, 158);
 }
 
-.experience-type, .experience-date-separator {
-    color: #178787 !important; 
+.experience-type,
+.experience-date-separator {
+    color: #178787 !important;
     font-weight: bolder;
 }
 
 
 
-.contacts dt, .contacts dd, .contact-skype, #contact h3 {
+.contacts dt,
+.contacts dd,
+.contact-skype,
+#contact h3 {
     display: none;
 }
+
 .contacts {
     display: flex;
     width: 70%;
     margin: auto;
     justify-content: center;
 }
-.contact{
+
+.contact {
     background-repeat: no-repeat;
     height: 130px;
     width: 130px;
     background-size: contain;
     margin: 20px;
 }
+
 .contact-email {
     background-image: url(../images/email.png);
 }
+
 .contact-phone {
     background-image: url(../images/phone.png);
 }
+
 .contact-github {
     background-image: url(../images/github.png);
 }
+
 .contact-facebook {
     background-image: url(../images/facebook.png);
 }
@@ -144,27 +167,37 @@ div.experience:first-of-type {
 .skill {
     position: relative;
 }
-.skill[data-skill='1']::after, .skill[data-skill='2']::after {
+
+.skill[data-skill='1']::after,
+.skill[data-skill='2']::after {
     content: '★';
     position: absolute;
     right: 5%;
 }
-.skill[data-skill='3']::after, .skill[data-skill='4']::after {
+
+.skill[data-skill='3']::after,
+.skill[data-skill='4']::after {
     content: '★★';
     position: absolute;
     right: 5%;
 }
-.skill[data-skill='5']::after, .skill[data-skill='6']::after {
+
+.skill[data-skill='5']::after,
+.skill[data-skill='6']::after {
     content: '★★★';
     position: absolute;
     right: 5%;
 }
-.skill[data-skill='7']::after, .skill[data-skill='8']::after {
+
+.skill[data-skill='7']::after,
+.skill[data-skill='8']::after {
     content: '★★★★';
     position: absolute;
     right: 5%;
 }
-.skill[data-skill='9']::after, .skill[data-skill='10']::after {
+
+.skill[data-skill='9']::after,
+.skill[data-skill='10']::after {
     content: '★★★★★';
     position: absolute;
     right: 5%;
@@ -172,26 +205,61 @@ div.experience:first-of-type {
 
 
 @media (max-width:970px) {
+    #about p {
+        width: 100%;
+    }
+
     header figure {
         display: none;
     }
 
-    #experiences, #education, #competencies, #hobbies {
+    #experiences,
+    #education,
+    #competencies,
+    #hobbies {
         display: initial;
     }
-    #experiences h3, #education h3, #competencies h3, #hobbies h3 {
+
+    #experiences h3,
+    #education h3,
+    #competencies h3,
+    #hobbies h3 {
         border: none;
         border-bottom: 2px solid;
         width: max-content;
     }
+
     .content {
         padding-left: 3%
     }
+
     .contacts {
         width: 80%;
         flex-wrap: wrap;
     }
+
     .contact {
         width: 80px;
+    }
+
+    .skills-primary .skill {
+        width: 30%;
+        max-width: 150px;
+        font-size: 2.5vw;
+
+    }
+
+    .skills-secondary .skill {
+        width: 30%;
+        max-width: 150px;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:350px) {
+
+    .skills-primary .skill,
+    .skills-secondary .skill {
+        font-size: 7px;
     }
 }
