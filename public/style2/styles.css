@@ -141,6 +141,34 @@ div.experience:first-of-type {
     background-image: url(../images/facebook.png);
 }
 
+.skill {
+    position: relative;
+}
+.skill[data-skill='1']::after, .skill[data-skill='2']::after {
+    content: '★';
+    position: absolute;
+    right: 5%;
+}
+.skill[data-skill='3']::after, .skill[data-skill='4']::after {
+    content: '★★';
+    position: absolute;
+    right: 5%;
+}
+.skill[data-skill='5']::after, .skill[data-skill='6']::after {
+    content: '★★★';
+    position: absolute;
+    right: 5%;
+}
+.skill[data-skill='7']::after, .skill[data-skill='8']::after {
+    content: '★★★★';
+    position: absolute;
+    right: 5%;
+}
+.skill[data-skill='9']::after, .skill[data-skill='10']::after {
+    content: '★★★★★';
+    position: absolute;
+    right: 5%;
+}
 
 
 @media (max-width:970px) {
