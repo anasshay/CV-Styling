@@ -123,6 +123,12 @@ div.experience:first-of-type {
     color: #178787 !important;
     font-weight: bolder;
 }
+.experience-location::before {
+    content: 'In';
+}
+.experience-date::before {
+    content: 'On';
+}
 
 
 
@@ -224,6 +230,11 @@ div.experience:first-of-type {
         border: none;
         border-bottom: 2px solid;
         width: max-content;
+    }
+
+    .experience-details {
+        position: static;
+        text-align: end;
     }
 
     .content {

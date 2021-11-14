@@ -147,6 +147,13 @@ dt {
     content: '@ ';
 }
 
+.experience-location::before {
+    content: 'In';
+}
+.experience-date::before {
+    content: 'On';
+}
+
 .skill span::after {
     content: '';
     background-color: red;
