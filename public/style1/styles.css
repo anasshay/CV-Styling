@@ -170,6 +170,17 @@ dt {
     z-index: -1;
 }
 
+.skills-secondary {
+    opacity: 0.6;
+}
+
+.skills-primary::before {
+    content: 'Main';
+}
+.skills-secondary::before {
+    content: 'Other';
+}
+
 .skill[data-skill='1'] span::after {
     width: calc(10% - 4%); /*Value% - 4%*/
 }
