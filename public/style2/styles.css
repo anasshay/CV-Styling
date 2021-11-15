@@ -26,6 +26,11 @@ header figure {
     transform: rotateZ(-15deg);
 }
 
+figure img {
+    height: 110px;
+    width: 110px;
+}
+
 #about p {
     width: 70%;
     font-style: italic;
@@ -148,7 +153,7 @@ div.experience:first-of-type {
 
 .contact {
     background-repeat: no-repeat;
-    height: 130px;
+    height: 80px;
     width: 130px;
     background-size: contain;
     margin: 20px;
@@ -206,6 +211,10 @@ div.experience:first-of-type {
     right: 5%;
 }
 
+.hidden-img {
+    opacity: 0;
+    width: 80px;
+}
 
 @media (max-width:970px) {
     #about p {
